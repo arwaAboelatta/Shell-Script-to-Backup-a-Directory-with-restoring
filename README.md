@@ -1,7 +1,3 @@
-Here’s a complete, concise README for your project:
-
----
-
 # Backup and Restore Solution
 
 This project provides a **backup and restore solution** to periodically back up a directory and restore specific backups. It includes a **Makefile**, a **backup script** (`backupd.sh`), and a **restore script** (`restore.sh`).

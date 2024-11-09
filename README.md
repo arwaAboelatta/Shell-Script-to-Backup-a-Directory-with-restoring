@@ -4,12 +4,8 @@ Here’s a complete, concise README for your project:
 
 # Backup and Restore Solution
 
-This project provides a **backup and restore solution** to periodically back up a directory and restore specific backups. It includes a **Makefile**, a **backup script** (`backupd.sh`), and a **restore script** (`restore.sh`). The system maintains a fixed number of backups and automatically removes the oldest when the limit is reached.
+This project provides a **backup and restore solution** to periodically back up a directory and restore specific backups. It includes a **Makefile**, a **backup script** (`backupd.sh`), and a **restore script** (`restore.sh`).
 
-## Files Overview
-- **backupd.sh**: Performs automatic backups of a specified directory at set intervals, managing a maximum number of backups by deleting the oldest when the limit is exceeded.
-- **restore.sh**: Allows users to restore backups from the backup directory.
-- **Makefile**: Simplifies the execution of backup and restore scripts and ensures necessary directories are available.
 
 ## Prerequisites
 
@@ -65,7 +61,7 @@ To delete all backups in the `backupdir`, run:
    make clean
    ```
 
-## BONUS: Cron-Based Backup Solution
+##  Cron-Based Backup Solution
 
 This project also includes an optional **cron-based backup** script (`backup-cron.sh`) for scheduled backups at set intervals.
 
@@ -87,19 +83,4 @@ Grant execute permission to `backup-cron.sh`:
 ```bash
 chmod +x backup-cron.sh
 ```
-
-### Adding Cron Jobs
-
-- **Every Minute**: Run `backup-cron.sh` every minute at the 23rd second:
-  ```cron
-  * * * * * (sleep 23; /path/to/backup-cron.sh)
-  ```
-
-- **Every 3rd Friday of the Month at 12:31 AM**:
-  ```cron
-  31 0 15-21 * 5 [ "$(date +\%u)" -eq 5 ] && /path/to/backup-cron.sh
-  ```
-
 ---
-
-This README provides a complete guide to setting up, running, and managing backups using this solution. Let me know if you need any adjustments!
